@@ -1,0 +1,94 @@
+#stackPane{
+    -fx-background-color: #3c3f41;
+}
+.label
+{
+    -fx-pref-height: 40px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-family: "microsoft yahei";
+}
+.text-field,.button{
+    -fx-background-color: #E4E3E2;
+}
+.button{
+    -fx-font-size: 0.95em;
+    -fx-pref-width: 35px;
+    -fx-pref-height: 20px;
+    -fx-border-insets: 0 0 0 0;
+    -fx-padding: 0;
+}
+/*ScrollPane的样式*/
+.scroll-pane {
+    -fx-background-color: #3F3C37;  /*设置背景颜色*/
+    -fx-border-color: #3F3C37;
+    -fx-background:#3F3C37;  /*content（滚动的内容）填充*/
+    -fx-background-insets: 0,0;
+}
+.scroll-bar:vertical {
+    -fx-pref-width: 8;
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #ADAFB2;
+    -fx-background-insets: 0;
+    -fx-background-radius: 2em;
+}
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #6F6F6F;
+}
+.scroll-bar:vertical .track{
+    -fx-background-color:#E4E3E2;
+    -fx-background-insets:  0, 0;
+}
+.scroll-bar:vertical > .track-background {
+    -fx-background-insets:  0, 0;
+}
+/*关闭ScrollPane垂直和水平的按钮:*/
+.scroll-bar .increment-arrow {
+    visibility: hidden;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em; /* 0 0 0 0 */
+}
+.scroll-bar .decrement-arrow {
+    visibility: hidden;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em; /* 0 0 0 0 */
+}
+.scroll-bar .increment-button {
+    visibility: hidden;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em; /* 0 0 0 0 */
+}
+.scroll-bar .decrement-button {
+    visibility: hidden;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em; /* 0 0 0 0 */
+}
+/*存放统计结果的VBox容器*/
+#vBoxResult{
+    -fx-background-color: #E4E3E2;
+}
+.member{
+    -fx-padding: 0 0 0 5;
+    -fx-pref-height: 20;
+    -fx-font-size: 0.95em;
+    -fx-text-fill: #000000;
+    /*-fx-border-color: RED;*/
+}
+.button-folder {
+    -fx-background-image: url('../image/Folder_Default.png');
+    -fx-pref-height: 24px;
+    -fx-pref-width: 24px;
+}
+.button-folder:hover {
+    -fx-background-image: url('../image/Folder.png');
+}
+.button-save{
+    -fx-pref-width: 60px;
+    -fx-pref-height: 25px;
+    -fx-alignment: center;
+    -fx-background-color: #14a014;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 0.35em;
+}
+.button-save:hover{
+    -fx-opacity: 0.9;
+}

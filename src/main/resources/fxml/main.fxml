@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           stylesheets="/css/MainStyle.css"
+           fx:id="stackPane"
+           fx:controller="application.MainController"
+           prefHeight="570.0" prefWidth="858.0">
+    <children>
+        <GridPane alignment="CENTER" hgap="15.0" vgap="15.0">
+            <columnConstraints>
+                <ColumnConstraints minWidth="10.0" prefWidth="130.0"/>
+                <ColumnConstraints minWidth="10.0" prefWidth="250.0"/>
+                <ColumnConstraints minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints minHeight="10.0" prefHeight="100"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+            </rowConstraints>
+            <children>
+                <!--选择文件-->
+                <VBox alignment="CENTER_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label text="选择班级excel文件:"/>
+                </VBox>
+                <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                      maxWidth="250.0">
+                    <TextField fx:id="textFieldExcel" prefWidth="250.0"/>
+                </VBox>
+                <VBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <Label styleClass="button-folder" onMouseClicked="#onClickedChooseFile"/>
+                </VBox>
+
+                <!--选择目录-->
+                <VBox alignment="CENTER_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label text="选择班级作业目录:"/>
+                </VBox>
+                <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                      maxWidth="250.0">
+                    <TextField fx:id="textFieldChoseFolder" prefWidth="250.0"/>
+                </VBox>
+                <VBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <Label styleClass="button-folder" onMouseClicked="#onClickedChooseFolder"/>
+                </VBox>
+
+                <VBox alignment="CENTER_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label text="统计结果:"/>
+                </VBox>
+                <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <VBox fx:id="vBoxResult" prefHeight="200" prefWidth="238">
+                        <Label styleClass="member">特色通过</Label>
+                        <Label styleClass="member">特色通过</Label>
+                        <Label styleClass="member">特色通过</Label>
+                        <Label styleClass="member">特色通过</Label>
+                        <Label styleClass="member">特色通过</Label>
+                    </VBox>
+                </ScrollPane>
+                <VBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <Button onMouseClicked="#onClickedStatistic">统计</Button>
+                </VBox>
+
+                <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="3">
+                    <Label styleClass="button-save">保存结果</Label>
+                </VBox>
+            </children>
+        </GridPane>
+    </children>
+</StackPane>
+
