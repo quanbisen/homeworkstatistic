@@ -5,9 +5,14 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
+/**文件名:ToastUtil
+ * 说明：业务逻辑的提示工具类
+ * @author super lollipop
+ * @date 2019/8/30
+ */
 public final class ToastUtil {
 
-    /**业务逻辑的提示函数
+    /**提示函数
      * @param stackPane 窗体的root根容器
      * @param fading 淡出的Label*/
 

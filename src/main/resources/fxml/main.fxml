@@ -17,7 +17,7 @@
             <columnConstraints>
                 <ColumnConstraints minWidth="10.0" prefWidth="130.0"/>
                 <ColumnConstraints minWidth="10.0" prefWidth="250.0"/>
-                <ColumnConstraints minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints minWidth="10.0" prefWidth="60.0"/>
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0"/>
@@ -51,24 +51,23 @@
                     <Label styleClass="button-folder" onMouseClicked="#onClickedChooseFolder"/>
                 </VBox>
 
+                <!--统计结果-->
                 <VBox alignment="CENTER_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="2">
                     <Label text="统计结果:"/>
                 </VBox>
-                <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <ScrollPane fx:id="scrollPane" GridPane.columnIndex="1" GridPane.rowIndex="2" hbarPolicy="NEVER">
+                    <!--VBox容器在单击“统计”后，由MainController控制放置实例化的Label组件-->
                     <VBox fx:id="vBoxResult" prefHeight="200" prefWidth="238">
-                        <Label styleClass="member">特色通过</Label>
-                        <Label styleClass="member">特色通过</Label>
-                        <Label styleClass="member">特色通过</Label>
-                        <Label styleClass="member">特色通过</Label>
-                        <Label styleClass="member">特色通过</Label>
+
                     </VBox>
                 </ScrollPane>
                 <VBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.rowIndex="2">
                     <Button onMouseClicked="#onClickedStatistic">统计</Button>
                 </VBox>
 
+                <!--保存结果-->
                 <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="3">
-                    <Label styleClass="button-save">保存结果</Label>
+                    <Label styleClass="button-save" onMouseClicked="#onClickedSaveResult">保存结果</Label>
                 </VBox>
             </children>
         </GridPane>
