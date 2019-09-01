@@ -151,7 +151,11 @@ public class MainController implements Initializable {
                 /*统计逻辑处理完成，下面更新GUI组件作显示*/
                 //首先取出提交作业的命名中的专业班级字符串
                 String majorClass = files[0].substring(0,5);
-
+                //如果vBoxResult不为空先清空,并且重置memberCount
+                if(vBoxResult.getChildren().size()!=0){
+                    vBoxResult.getChildren().remove(0,vBoxResult.getChildren().size());
+                    memberCount = 0;
+                }
                 //根据map中的key遍历value，对包含“未交”标签的记录进行GUI显示
                 for (String key:keySet){
                     if (map.get(key).contains("未交")){
@@ -185,7 +189,7 @@ public class MainController implements Initializable {
             else {  //否则，执行保存文件操作
 
                 //实例化文件句柄
-                File saveFile = new File(textFieldChoseFolder.getText()+File.separator+"未交作业文件名单.txt");
+                File saveFile = new File(textFieldChoseFolder.getText()+File.separator+"未交文件名单.txt");
                 try {
                     FileWriter fileWriter = new FileWriter(saveFile);
                     ObservableList<Node> nodes = vBoxResult.getChildren();

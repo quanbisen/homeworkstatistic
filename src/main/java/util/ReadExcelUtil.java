@@ -22,7 +22,7 @@ public final class ReadExcelUtil {
 
     /**读取Excel文件的函数
      * @param excelFile Excel文件的路径
-     * @return
+     * @return List<List<String>> 行集合，每一个行也是一个列集合
      * */
     public static List<List<String>> readExcelFile(File excelFile){
         List<List<String>> rowList = null;  //Excel文件行记录集合
