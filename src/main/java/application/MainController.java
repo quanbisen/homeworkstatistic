@@ -150,7 +150,13 @@ public class MainController implements Initializable {
                 }
                 /*统计逻辑处理完成，下面更新GUI组件作显示*/
                 //首先取出提交作业的命名中的专业班级字符串
-                String majorClass = files[0].substring(0,5);
+                int index = 0;
+                String majorClass = "";
+                do {
+                    majorClass = files[index].substring(0,5);
+                    index++;
+                }
+                while (majorClass.equals("未交文件名"));
                 //如果vBoxResult不为空先清空,并且重置memberCount
                 if(vBoxResult.getChildren().size()!=0){
                     vBoxResult.getChildren().remove(0,vBoxResult.getChildren().size());
